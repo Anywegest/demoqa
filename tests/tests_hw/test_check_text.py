@@ -21,4 +21,12 @@ def test_btn_text(browser):
         return True
     else:
         return False
+def test_page_elements(browser):
 
+    elements_page = ElementsPage(browser)
+
+    elements_page.visit()
+    assert elements_page.text_elements.get_text() == 'Elements'
+    assert elements_page.icon_elements.exist()
+    assert elements_page.btn_sidebar_first.exist()
+    assert elements_page.btn_sidebar_first_textbox.exist()
