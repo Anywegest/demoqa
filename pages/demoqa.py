@@ -5,11 +5,15 @@ class Demoqa(BasePage):
 
     def __init__(self, driver):
         self.base_url = 'https://demoqa.com/'
+        self.pageData = {
+            'title': 'DEMOQA'
+        }
         self.icon = WebElement(driver, '#app > header > a')
         self.btn_elements = WebElement(driver, '#app>div>div>div.home-body>div>div:nth-child(1)')
         self.pod = WebElement(driver, '#app > footer > span')
         self.btn_hw = WebElement(driver, 'div.home-body>div>div:nth-child(1)')
         super().__init__(driver, self.base_url)
+
 
 
 
