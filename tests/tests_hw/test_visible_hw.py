@@ -6,10 +6,10 @@ def test_visible_accordian(browser):
     accordian_page = Accordian(browser)
 
     accordian_page.visit()
+    assert accordian_page.sec.visible()
     accordian_page.lem.click()
     time.sleep(3)
     assert not accordian_page.sec.visible()
-    #assert accordian_page.sec.visible()
 
 
 def test_visible_accordian_default(browser):
