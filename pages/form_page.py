@@ -19,3 +19,4 @@ class FormPage(BasePage):
         self.city = WebElement(driver, '#state')
       #  self.state = WebElement(driver, '#react-select-3-input')
         self.state_and_city = WebElement(driver, "//*[contains(text(),'NCR')]")
+

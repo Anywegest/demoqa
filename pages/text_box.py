@@ -7,3 +7,4 @@ class TextBox(BasePage):
         super().__init__(driver, self.base_url)
 
         self.full = WebElement(driver, '#userName')
+        self.current_address = WebElement(driver, '#currentAddress')
