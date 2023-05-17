@@ -1,6 +1,6 @@
 import time
-
 from selenium.webdriver.common.by import By
+import logging
 class BasePage:
 
 
@@ -36,3 +36,9 @@ class BasePage:
 
     def get_title(self):
         return self.driver.title
+    def alert(self):     #метод без локаторов(если их нет у элементов которые мы проверяем)
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1, ex)
+            return False

@@ -16,7 +16,10 @@ class FormPage(BasePage):
         self.btn_close_modal = WebElement(driver, '#closeLargeModal')
         self.hobbies = WebElement(driver, '#hobbiesWrapper')
         self.current_address = WebElement(driver, '#currentAddress')
-        self.city = WebElement(driver, '#state')
-      #  self.state = WebElement(driver, '#react-select-3-input')
-        self.state_and_city = WebElement(driver, "//*[contains(text(),'NCR')]")
+        self.state = WebElement(driver, '#state')
+        #self.city = WebElement(driver, '#state')
+        self.state_and = WebElement(driver, '#react-select-3-input')
+        #self.state_and_city = WebElement(driver, "//*[contains(text(),'NCR')]")
+        self.city = WebElement(driver, '#city')
+        self.city_and = WebElement(driver, '#city > div > div.css-1hwfws3 > div.css-1g6gooi')
 

@@ -31,7 +31,7 @@ class WebElement:
         return self.find_element().is_displayed()
 
     def check_count_elements(self, count: int):
-        if len(self.find_elements()) == count:
+        if len(self.find_elements()) == count:   #len-количество кнопок на странице
             return True
         return False
 
@@ -79,6 +79,9 @@ class WebElement:
         else:
             print('locator type ' + self.locator_type + ' not correct')
         return False
+
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
 
  #   def click(self):
   #      self.driver.find_element(By.CSS_SELECTOR, self.locator).click()
