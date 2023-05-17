@@ -8,3 +8,4 @@ class TextBox(BasePage):
 
         self.full = WebElement(driver, '#userName')
         self.current_address = WebElement(driver, '#currentAddress')
+        self.submit = WebElement(driver, '#submit')

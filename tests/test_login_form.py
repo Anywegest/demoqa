@@ -28,3 +28,19 @@ def test_login_form(browser):
 
     assert form_page.modal_dialog.exist()
     form_page.btn_close_modal.click_force()
+
+
+
+
+def test_state_and_city(browser):
+    form_page = FormPage(browser)
+
+    form_page.visit()
+   #form_page.state.scroll_to_element()
+    form_page.state.click()
+    #form_page.state.send_keys(Keys.PAGE_DOWN)
+    #form_page.state_and.send_keys('NCR')
+    form_page.state_and.send_keys(Keys.ENTER)
+    form_page.city.click()
+    form_page.city_and.send_keys(Keys.ENTER)
+
